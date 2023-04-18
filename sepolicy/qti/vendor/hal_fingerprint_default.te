@@ -8,10 +8,6 @@ allow hal_fingerprint_default fingerprint_device:chr_file rw_file_perms;
 allow hal_fingerprint_default graphics_device:chr_file rw_file_perms;
 allow hal_fingerprint_default tee_device:chr_file rw_file_perms;
 
-allow hal_fingerprint_default { vendor_persist_fingerprint_file }:file write;
-allow hal_fingerprint_default { vendor_data_file }:dir write;
-allow hal_fingerprint_default { mnt_vendor_file }:dir search;
-
 rw_dir_file(hal_fingerprint_default, vendor_proc_display)
 r_dir_file(hal_fingerprint_default, vendor_proc_fingerprint)
 
